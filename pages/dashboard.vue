@@ -1,0 +1,12 @@
+<template>
+    <div>
+        <NuxtLayout name="inner-nav">
+            <h1>dashboard page</h1>
+        </NuxtLayout>
+    </div>
+</template>
+
+<script setup lang="ts">
+</script>
+
+<style></style>
