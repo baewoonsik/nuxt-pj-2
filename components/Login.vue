@@ -17,6 +17,7 @@ function handleSubmit(event: Event) {
     if (user) {
         // 로그인 성공
         alert("로그인 성공.");
+        // localStorage.setItem("user", JSON.stringify(user));
         router.push("/dashboard");
     } else {
         // 로그인 실패
