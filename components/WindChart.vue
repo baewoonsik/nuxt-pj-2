@@ -1,20 +1,3 @@
-<!-- |이 코드는 Vue.js와 ApexCharts를 사용하여 라인 차트를 그리는 컴포넌트입니다.
-|
-|좋은 점:
-|- Vue.js의 컴포넌트 기능을 활용하여 코드의 가독성과 유지보수성이 높아졌습니다.
-|- ApexCharts를 사용하여 간편하게 차트를 그릴 수 있습니다.
-|- 컴포넌트 내에서 ClientOnly 태그를 사용하여 클라이언트 측에서만 렌더링되도록 설정하여 서버 측에서는 불필요한 작업을 줄일 수 있습니다.
-|
-|나쁜 점:
-|- 코드의 가독성을 높이기 위해 들여쓰기와 공백을 일관성 있게 사용하지 않았습니다.
-|- 타입스크립트를 사용하고 있지만, 변수와 함수의 타입을 명시하지 않아 가독성이 떨어집니다.
-|- 컴포넌트의 props를 명확하게 정의하지 않았습니다. -->
-<template>
-    <ClientOnly>
-        <apexchart height="350" type="line" :options="chartOptions" :series="chartData"></apexchart>
-    </ClientOnly>
-</template>
-  
 <script setup lang="ts">
 
 const props = defineProps<{
@@ -97,3 +80,9 @@ const chartOptions = {
     }
 };
 </script>
+
+<template>
+    <ClientOnly>
+        <apexchart height="350" type="line" :options="chartOptions" :series="chartData"></apexchart>
+    </ClientOnly>
+</template>

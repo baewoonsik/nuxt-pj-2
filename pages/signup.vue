@@ -22,7 +22,7 @@ const handleSubmit = (event: Event) => {
     };
     userStore.addUser(user)
     // 회원가입 완료 후 홈으로 이동
-    router.push('/');
+    router.replace('/');
 };
 </script>
 

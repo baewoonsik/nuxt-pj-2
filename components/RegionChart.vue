@@ -27,7 +27,7 @@ const chartOptions = {
         height: 430,
     },
     title: {
-        text: 'High & Low Temperature',
+        text: '지역별 kmaTci 수치',
         align: 'center'
     },
     plotOptions: {
@@ -36,10 +36,11 @@ const chartOptions = {
             dataLabels: {
                 position: 'top',
             },
+            columnWidth: '15%',
         }
     },
     dataLabels: {
-        enabled: true,
+        enabled: false,
         offsetX: -6,
         style: {
             fontSize: '12px',
@@ -60,16 +61,19 @@ const chartOptions = {
     },
     yaxis: {
         title: {
-            text: 'Temperature (°C)'
+            text: 'kmaTci'
         },
-        min: 0,
-        max: 40,
+        min: -0.3,
+        max: 0.4,
     },
 };
 </script>
 
 <template>
-    <ClientOnly>
-        <apexchart width="560" type="bar" :options="chartOptions" :series="chartData"></apexchart>
-    </ClientOnly>
+    <div style="display: flex; justify-content: center;">
+        <ClientOnly>
+            <apexchart width="800" type="bar" :options="chartOptions" :series="chartData">
+            </apexchart>
+        </ClientOnly>
+    </div>
 </template>

@@ -9,7 +9,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@types/node": "^18",
     "nuxt": "^3.4.3"
   },
@@ -21,6 +20,7 @@
     "apexcharts": "^3.40.0",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "bootstrap-vue": "^2.23.1",
     "pinia": "^2.0.35",
     "vue3-apexcharts": "^1.4.1"
   }

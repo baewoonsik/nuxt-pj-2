@@ -1,49 +1,3 @@
-<template>
-    <NuxtLayout name="inner-nav">
-        <div class="chart-containing" v-if="isLoaded">
-            <h1 class="chart-title">Weather Data Dash Board</h1>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4">
-                        <RelativeHumidityChart :categories="categories" :data="rhmChartData" />
-                    </div>
-                    <div class="col-4">
-                        <TemperatureChart :categories="categories" :data="temChartData" />
-                    </div>
-                    <div class="col-4">
-                        <WindChart :categories="categories" :data="windChartData" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <RelativeHumidityChart :categories="categories" :data="rhmChartData" />
-                    </div>
-                    <div class="col-4">
-                        <TemperatureChart :categories="categories" :data="temChartData" />
-                    </div>
-                    <div class="col-4">
-                        <WindChart :categories="categories" :data="windChartData" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <RelativeHumidityChart :categories="categories" :data="rhmChartData" />
-                    </div>
-                    <div class="col-4">
-                        <TemperatureChart :categories="categories" :data="temChartData" />
-                    </div>
-                    <div class="col-4">
-                        <WindChart :categories="categories" :data="windChartData" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div v-else>
-            <h1>Loading...</h1>
-        </div>
-    </NuxtLayout>
-</template>
-
 <script setup lang="ts">
 
 import { useWeatherStore } from '@/store/weatherStore';
@@ -93,6 +47,52 @@ onMounted(() => {
 });
 
 </script>
+
+<template>
+    <NuxtLayout name="inner-nav">
+        <div class="chart-containing" v-if="isLoaded">
+            <h1 class="chart-title">Weather Data Dash Board</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <RelativeHumidityChart :categories="categories" :data="rhmChartData" />
+                    </div>
+                    <div class="col-4">
+                        <TemperatureChart :categories="categories" :data="temChartData" />
+                    </div>
+                    <div class="col-4">
+                        <WindChart :categories="categories" :data="windChartData" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <RelativeHumidityChart :categories="categories" :data="rhmChartData" />
+                    </div>
+                    <div class="col-4">
+                        <TemperatureChart :categories="categories" :data="temChartData" />
+                    </div>
+                    <div class="col-4">
+                        <WindChart :categories="categories" :data="windChartData" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <RelativeHumidityChart :categories="categories" :data="rhmChartData" />
+                    </div>
+                    <div class="col-4">
+                        <TemperatureChart :categories="categories" :data="temChartData" />
+                    </div>
+                    <div class="col-4">
+                        <WindChart :categories="categories" :data="windChartData" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-else>
+            <h1>Loading...</h1>
+        </div>
+    </NuxtLayout>
+</template>
 
 <style scoped>
 .chart-containing {

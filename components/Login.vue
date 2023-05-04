@@ -15,35 +15,25 @@ function handleSubmit(event: Event) {
         (u) => u.username === username.value && u.password === password.value
     );
     if (user) {
-        // 로그인 성공
         alert("로그인 성공.");
-        // localStorage.setItem("user", JSON.stringify(user));
-        router.push("/dashboard");
+        userStore.getUserInfo(username.value);
+        router.replace("/dashboard");
+        console.log(userStore.userInfo)
     } else {
-        // 로그인 실패
         alert("아이디와 비밀번호를 확인해주세요.");
     }
 }
-
-onMounted(() => {
-    // 로그인 상태 확인
-    // if (userStore.isLogin) {
-    //     alert("이미 로그인 되어있습니다.");
-    //     router.push("/dashboard");
-    // }
-    console.log(userStore.user)
-});
 
 </script>
 
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="img-container col-md-6 p-0" style="height: 100vh; overflow: hidden;">
-                <img src="https://img.freepik.com/free-photo/contemporary-architecture-office-building-cityscape-personal-perspective-concept_53876-42940.jpg?w=2000"
-                    alt="이미지 설명" style="height: 100%; width: auto;">
+            <div class="col-md-9 p-0" style="height: 100vh; overflow: hidden;">
+                <img src="https://www.10wallpaper.com/wallpaper/1366x768/1107/The_Best_of_Nature-The_most_Beautiful_Landscape_01_1366x768.jpg"
+                    alt="image" style="height: 100%; width: auto;">
             </div>
-            <div class="col-md-6 p-0">
+            <div class="col-md-3 p-0">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <form @submit="handleSubmit">
                         <div class="form-group">
@@ -69,15 +59,3 @@ onMounted(() => {
         </div>
     </div>
 </template>
-
-<style>
-.img-container {
-    position: relative;
-}
-
-.img-container img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-</style>

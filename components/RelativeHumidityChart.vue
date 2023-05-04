@@ -1,9 +1,3 @@
-<template>
-    <ClientOnly>
-        <apexchart height="350" type="area" :options="chartOptions" :series="chartData"></apexchart>
-    </ClientOnly>
-</template>
-  
 <script setup lang="ts">
 
 const props = defineProps<{
@@ -51,3 +45,9 @@ const chartOptions = {
     },
 }
 </script>
+
+<template>
+    <ClientOnly>
+        <apexchart height="350" type="area" :options="chartOptions" :series="chartData"></apexchart>
+    </ClientOnly>
+</template>

@@ -14,12 +14,9 @@ interface WeatherData {
   sumRn: number; // 일강수량
 }
 
-// 향후 .env 파일로 빼기
 const baseURL = "https://apis.data.go.kr/1360000/AsosDalyInfoService";
 const privateKey =
   "JB08o2MkBwznc9Zxs1HmJjv1VFxdsesKrng4Ty9li2FWreVQhY7qQ88C2K7ul6%2FyC1bBGkad%2BLof7P6VM9raZg%3D%3D";
-
-// const config = useRuntimeConfig();
 
 export const useWeatherStore = defineStore("weather", {
   state: () => ({
